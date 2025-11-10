@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 40px;
             background-color: #f9f9f9;
         }
 
@@ -18,35 +18,34 @@
         }
 
         main {
-            margin-top: 30px;
+            margin-top: 60px;
         }
 
         section {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .progress-container {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .progress-title {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .progress-bar {
             background-color: #ddd;
-            border-radius: 25px;
+            border-radius: 50px;
             overflow: hidden;
-            height: 25px;
-            margin-bottom: 15px;
+            height: 50px;
+            margin-bottom: 30px;
             position: relative;
         }
 
-        /* Blue fill (animated) */
         .progress-fill {
             background-color: #007bff;
             height: 100%;
@@ -54,7 +53,6 @@
             transition: width 1.5s ease-in-out;
         }
 
-        /* Text overlay — always centered */
         .progress-text {
             position: absolute;
             top: 0;
@@ -66,14 +64,15 @@
             justify-content: center;
             color: #000;
             font-weight: bold;
+            font-size: 1.2em;
             z-index: 2;
-            pointer-events: none; /* lets you click through if needed */
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Scott Janney's Campaign Goals</h1>
+        <h1 style="font-size: 80px;"> Campaign Goals by 1/31/26</h1>
     </header>
 
     <main>
@@ -87,7 +86,7 @@
                     <div class="progress-text">0/3</div>
                 </div>
 
-                <div class="progress-title">10 - Ten Endorsements</div>
+                <div class="progress-title">10 - Ten Specific Endorsements</div>
                 <div class="progress-bar">
                     <div class="progress-fill" data-width="0%"></div>
                     <div class="progress-text">0/10</div>
@@ -99,7 +98,7 @@
                     <div class="progress-text">16/30</div>
                 </div>
 
-                <div class="progress-title">100 - $100k in Campaign Donations</div>
+                <div class="progress-title">100 - $100k in Campaign Commitments</div>
                 <div class="progress-bar">
                     <div class="progress-fill" data-width="1%"></div>
                     <div class="progress-text">1k/100k</div>
@@ -109,7 +108,6 @@
     </main>
 
     <script>
-        // Animate bars after page loads
         window.addEventListener('load', () => {
             document.querySelectorAll('.progress-fill').forEach(bar => {
                 const target = bar.getAttribute('data-width');
